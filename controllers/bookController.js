@@ -27,6 +27,7 @@ module.exports = {
         .then(bookDb => res.json(bookDb))
         .catch(err => res.json(err))
     },
+    // remove book
     remove: (req, res) => {
         db.Book.findById(req.params.id)
         .then(bookDb => bookDb.remove())
