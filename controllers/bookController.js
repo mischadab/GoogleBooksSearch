@@ -20,10 +20,11 @@ module.exports = {
         db.Book.create(req.body)
          .then(bookDb => res.json(bookDb))
          .catch(err => res.json(err))
-        }
-    }
+    },
     // update book
     update: (req, res) => {
         db.Book.findOneAndUpdate({ id: req.params.id }, req.body)
+        .then(bookDb => res.json(bookDb))
+        .catch(err => res.json(err))
     }
 }
