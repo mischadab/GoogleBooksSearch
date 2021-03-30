@@ -8,7 +8,7 @@ class Search extends React.Component {
         value: "",
         books: []
     }
-}
+
 
 
 componentDidMouth() {
