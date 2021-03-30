@@ -28,3 +28,12 @@ searchBook = query => {
     .then(res => this.setState({ books: res.data.items.map(bookData => this.makeBook(bookData)) }))
     .catch(err => console.error(err));
 }
+
+handleInputChange = event => {
+    const name = event.target.name
+    const value = event.target.value
+    this.setState({
+        [name]: value
+    })
+}
+
