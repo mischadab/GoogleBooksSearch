@@ -41,3 +41,22 @@ handleFormSubmit = event => {
     event.preventDefault()
     this.searchBook(this.state.search)
 }
+
+render() {
+    return (
+        <div>
+            <Form
+                search={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}
+            />
+            <div className="container">
+                <h2>Results</h2>
+                <Results books={this.state.books} />
+            </div>
+        </div>
+    )
+}
+}
+
+export default Search;
