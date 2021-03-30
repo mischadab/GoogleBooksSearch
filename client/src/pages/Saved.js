@@ -5,3 +5,9 @@ class Saved extends Component {
         savedBooks: []
     }
 }
+
+componentDidMount() {
+    API.savedBook()
+    .then(savedBooks => this.setState({ savedBooks: savedBooks }))
+    .catch(err => console.error(err))
+}
