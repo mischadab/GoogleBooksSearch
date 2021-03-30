@@ -37,3 +37,7 @@ handleInputChange = event => {
     })
 }
 
+handleFormSubmit = event => {
+    event.preventDefault()
+    this.searchBook(this.state.search)
+}
