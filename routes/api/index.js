@@ -10,7 +10,7 @@ router.use('/books', bookApiRoutes)
 router.use('/google', googleApiRoute)
 
 // for all other requests, render the html
-router.use((req, res => {
+router.use(( res => {
     res.sendFile(path.join(__dirname, '../../client/build/index.html'))
 }))
 
