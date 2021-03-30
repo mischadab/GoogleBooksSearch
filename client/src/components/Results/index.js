@@ -5,7 +5,7 @@ class Results extends Component {
     state = {
         savedBooks: []
     }
-}
+
 
 componentDidMount() {
     API.savedBooks()
