@@ -23,3 +23,8 @@ makeBook = bookData => {
     }
 }
 
+searchBook = query => {
+    API.getBooks(query)
+    .then(res => this.setState({ books: res.data.items.map(bookData => this.makeBook(bookData)) }))
+    .catch(err => console.error(err));
+}
